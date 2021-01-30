@@ -1,0 +1,93 @@
+<header class="header-area transparent-bar section-padding-1">
+            <div class="container-fluid">
+                <div class="header-large-device">
+                    <div class="header-top header-top-ptb-1 border-bottom-1">
+                        
+                    </div>
+                    <div class="header-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="/"><img src="/images/logo/logo.png" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-7">
+                                <div class="main-menu main-menu-padding-1 main-menu-lh-1">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="/">HOME </a>
+                                               
+                                            </li>
+                                           
+                                           
+                                            {{#if user}}
+                                            <li><a href="/my-account" id="user-name-id">{{user.name}}</a></li>
+                                            {{/if}}
+                                            <li><a href="/logout" style="margin-left: 600px;">Logout </a>
+                                               
+                                            </li>
+                                       
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3">
+                                <div class="header-action header-action-flex header-action-mrg-right">
+                                    <div class="same-style-2 header-search-1">
+                                        <a class="search-toggle" href="#">
+                                            <i class="icon-magnifier s-open"></i>
+                                            <i class="icon_close s-close"></i>
+                                        </a>
+                                        <div class="search-wrap-1">
+                                            <form action="/search">
+                                                <input placeholder="Search products…" type="text" name="text">
+                                                <button class="button-search"><i class="icon-magnifier"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                  
+                                   
+                                    <div class="same-style-2 header-cart">
+                                        <a class="cart-active" href="#">
+                                            <i class="icon-basket-loaded"></i>
+                                            {{#if cartCount}}
+                                            <span class="pro-count red" id="cart-counts">{{cartCount}}</span>
+                                            {{/if}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-small-device small-device-ptb-1">
+                    <div class="row align-items-center">
+                        <div class="col-5">
+                            <div class="mobile-logo">
+                                <a href="index.html">
+                                    <img alt="" src="/images/logo/logo.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="header-action header-action-flex">
+                                <div class="same-style-2">
+                                    <a href="login-register.html"><i class="icon-user"></i></a>
+                                </div>
+                                <div class="same-style-2">
+                                    <a href="wishlist.html"><i class="icon-heart"></i><span class="pro-count red">03</span></a>
+                                </div>
+                                <div class="same-style-2 header-cart">
+                                    <a class="cart-active" href="#">
+                                        <i class="icon-basket-loaded"></i><span class="pro-count red">02</span>
+                                    </a>
+                                </div>
+                                <div class="same-style-2 main-menu-icon">
+                                    <a class="mobile-header-button-active" href="#"><i class="icon-menu"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>

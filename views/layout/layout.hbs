@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!-- All CSS is here
+	============================================ -->
+
+    <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/vendor/signericafat.css">
+    <link rel="stylesheet" href="/css/vendor/cerebrisans.css">
+    <link rel="stylesheet" href="/css/vendor/simple-line-icons.css">
+    <link rel="stylesheet" href="/css/vendor/elegant.css">
+    <link rel="stylesheet" href="/css/vendor/linear-icon.css">
+    <link rel="stylesheet" href="/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="/css/plugins/easyzoom.css">
+    <link rel="stylesheet" href="/css/plugins/slick.css">
+    <link rel="stylesheet" href="/css/plugins/animate.css">
+    <link rel="stylesheet" href="/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {{{body}}}
+    {{#if user}}
+    {{>user-header}}
+    {{/if}}
+    {{#if admin}}
+    {{else}}
+    <div class="subscribe-area bg-gray pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <div class="section-title">
+                        <h2>keep connected</h2>
+                        <p>Get updates by our weekly Social media update</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-area bg-gray pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-info-wrap">
+                        <div class="footer-logo">
+                            <a href="#"><img src="/images/logo/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="single-contact-info">
+                            <span>Our Location</span>
+                            <p>Kozhikode, Kerala, India</p>
+                        </div>
+                        <div class="single-contact-info">
+                            <span>24/7 hotline:</span>
+                            <p>(+91) 9605558976</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-right-wrap">
+                        <div class="footer-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="/">home</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                        <div class="copyright">
+                            <p>Copyright © 2020 Ajmal Asharaf T</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {{/if}}
+    <script src="/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+    <script src="/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="/js/plugins/slick.js"></script>
+    <script src="/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="/js/plugins/jquery.instagramfeed.min.js"></script>
+    <script src="/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="/js/plugins/wow.js"></script>
+    <script src="/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="/js/plugins/jquery-ui.js"></script>
+    <script src="/js/plugins/magnific-popup.js"></script>
+    <script src="/js/plugins/sticky-sidebar.js"></script>
+    <script src="/js/plugins/easyzoom.js"></script>
+    <script src="/js/plugins/scrollup.js"></script>
+    <script src="/js/plugins/ajax-mail.js"></script>
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above  
+<script src="/js/vendor/vendor.min.js"></script>
+<script src="/js/plugins/plugins.min.js"></script>  -->
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

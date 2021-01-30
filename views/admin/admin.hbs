@@ -1,0 +1,215 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FrontendFunn -</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/style1.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-mattBlackLight fixed-top">
+    <button class="navbar-toggler sideMenuToggler" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/admin/">Admin Panel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <div>
+
+            <a href="/logout"> <span class="text">Logout</span></a>
+          </div>
+
+
+
+
+
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="wrapper d-flex">
+    <div class="sideMenu bg-mattBlackLight">
+      <div class="sidebar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/admin" class="nav-link px-2">
+              <i class="material-icons icon">
+                dashboard
+              </i>
+              <span class="text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/user-management" class="nav-link px-2">
+              <i class="material-icons icon">
+                person
+              </i>
+              <span class="text">User Management</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/product-management" class="nav-link px-2">
+              <i class="material-icons icon"> insert_chart </i><span class="text">Product Management</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/category-management" class="nav-link px-2">
+              <i class="material-icons icon"> insert_chart </i><span class="text">Category
+                Management</span></a>
+          </li>
+          <li class="nav-item">
+          <li class="nav-item">
+            <a href="/admin/get-all-orders" class="nav-link px-2">
+              <i class="material-icons icon">
+                pages
+              </i>
+              <span class="text">All Orders</span>
+            </a>
+          </li>
+          <a href="#" class="nav-link px-2">
+            <i class="material-icons icon">
+              settings
+            </i>
+            <span class="text">Settings</span>
+          </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2">
+              <i class="material-icons icon">
+                computer
+              </i>
+              <span class="text">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 sideMenuToggler">
+              <i class="material-icons icon expandView ">
+                view_list
+              </i>
+              <span class="text">Resize</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-md-3 my-3">
+              <div class="bg-mattBlackLight px-3 py-3">
+                <h4 class="mb-2">Total Orders</h4>
+                <div class="progress" style="height: 16px;">
+                  <div class="progress-bar bg-info text-mattBlackDark" role="progressbar" style="width: 100%;"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    {{orderNum.totalOrders}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 my-3">
+              <div class="bg-mattBlackLight px-3 py-3">
+                <h4 class="mb-2">Ready To ship Orders</h4>
+                <div class="progress" style="height: 16px;">
+                  <div class="progress-bar bg-warning text-mattBlackDark" role="progressbar"
+                    style="width: {{orderNum.readyToshipPers}}%;" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100">
+                    {{orderNum.readyToship}}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-3 my-3">
+              <div class="bg-mattBlackLight p-3">
+                <h4 class="mb-2">Completed Orders</h4>
+                <div class="progress" style="height: 16px;">
+                  <div class="progress-bar bg-success" role="progressbar"
+                    style="width: {{orderNum.completedOrderPers}}%;" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100">
+                    {{orderNum.completedOrder}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 my-3">
+              <div class="bg-mattBlackLight p-3">
+                <h4 class="mb-2">Cancelled orders</h4>
+                <div class="progress" style="height: 16px;">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: {{orderNum.cancelOrderPers}}%;"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    {{orderNum.cancelOrder}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="bg-mattBlackLight p-3">
+                <div id="date" hidden>{{response.date}}</div>
+                <div id="total" hidden>{{response.total}}</div>
+                <canvas id="myChart"></canvas>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+    </div>
+    </main>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+    integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"
+    integrity="sha256-qE/6vdSYzQu9lgosKxhFplETvWvqAAlmAuR+yPh/0SI=" crossorigin="anonymous"></script>
+  <script src="/js/script1.js"></script>
+  <script>
+    var date=document.getElementById('date').innerHTML
+    var total=document.getElementById('total').innerHTML
+
+    var dateArr=date.split(',')
+    var totalArr=total.split(',')
+    console.log('total',totalArr)
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+        labels: dateArr,
+        datasets: [{
+          label: 'Sales',
+          backgroundColor: 'rgb(255, 255, 255)',
+          borderColor: 'rgb(0,0,0)',
+          data: totalArr
+        }]
+      },
+
+      // Configuration options go here
+      options: {}
+    });
+  </script>
+</body>

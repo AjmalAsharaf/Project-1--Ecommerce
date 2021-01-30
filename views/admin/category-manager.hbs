@@ -1,0 +1,175 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FrontendFunn -</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+        integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style1.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-mattBlackLight fixed-top">
+        <button class="navbar-toggler sideMenuToggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="/admin/">Admin Panel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <div>
+
+                        <a href="/logout"> <span class="text">Logout</span></a>
+                    </div>
+
+
+
+
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper d-flex">
+        <div class="sideMenu bg-mattBlackLight">
+            <div class="sidebar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/admin" class="nav-link px-2">
+                            <i class="material-icons icon">
+                                dashboard
+                            </i>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/user-management" class="nav-link px-2">
+                            <i class="material-icons icon">
+                                person
+                            </i>
+                            <span class="text">User Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/product-management" class="nav-link px-2">
+                            <i class="material-icons icon"> insert_chart </i><span class="text">Product
+                                Management</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/category-management" class="nav-link px-2">
+                            <i class="material-icons icon"> insert_chart </i><span class="text">Product
+                                Management</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2">
+                            <i class="material-icons icon">
+                                settings
+                            </i>
+                            <span class="text">Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link px-2 sideMenuToggler">
+                            <i class="material-icons icon expandView ">
+                                view_list
+                            </i>
+                            <span class="text">Resize</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 m-auto">
+                            
+                            <div class="bg-mattBlackLight my-2 p-3">
+                                
+                                <h2 style="color: aliceblue;" class="text-center">Category Management</h2>
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 m-auto">
+                                    
+                                    <div class="bg-mattBlackLight my-2 p-3">
+                                         <a href="/admin/add-category" class="btn btn-primary ml-2">Add New SubCategory</a>
+                                       <table class="table mt-4" id="productsTable">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="table-text">Name of Sub category</th>
+                                                    <th scope="col" class="table-text">Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each category}}
+                                                <tr>
+
+                                                    <td class="table-text">{{this.productSubCat}}</td>
+                                                    <td class="table-text"><a class="btn btn-primary" href="/admin/edit-category/{{this._id}}">Edit</a> <a class="btn btn-danger" href="/admin/delete-category/{{this._id}}" onclick="return confirm(`Are you want to delete {{this.productSubCat}}`)"> Delete</a></td>
+                                                    
+
+
+
+                                                </tr>
+
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"
+        integrity="sha256-qE/6vdSYzQu9lgosKxhFplETvWvqAAlmAuR+yPh/0SI=" crossorigin="anonymous"></script>
+    <script src="/js/script1.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script>
+    $('#add-category').submit((e)=>{
+        e.preventDefault()
+        
+        let productSubCat=$('#sub-category').val()
+        $('#exists').hide()
+        $.ajax({
+            url:'/admin/add-category',
+            method:'post',
+            data:{
+                productSubCat
+            },
+            success:(response)=>{
+                if(response.status){
+                    window.location.href='/admin'
+                }else{
+                    $('#exists').show()
+                }
+            }
+        })
+    })
+</script>
